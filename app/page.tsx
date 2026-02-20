@@ -6,6 +6,8 @@ import Vat0Framework from "@/components/sections/Vat0Framework";
 import IntegrationEcosystem from "@/components/sections/IntegrationEcosystem";
 import TheMandate from "@/components/sections/TheMandate";
 import ImpactMetrics from "@/components/sections/ImpactMetrics";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <IntegrationEcosystem />
       <TheMandate />
       <ImpactMetrics />
+      <Contact />
+      <Footer />
     </main>
   );
 }
