@@ -1,6 +1,6 @@
 "use client";
 
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react";
 
 export default function BrandStatement() {
@@ -19,7 +19,7 @@ export default function BrandStatement() {
   return (
     <section
       ref={container}
-      className="relative min-h-[100vh] md:min-h-[150vh] w-full flex items-center justify-center py-20 md:py-32 px-4 sm:px-6 md:px-10 lg:px-12 overflow-hidden"
+      className="relative min-h-screen md:min-h-[150vh] w-full flex items-center justify-center py-20 md:py-32 px-4 sm:px-6 md:px-10 lg:px-12 overflow-hidden"
     >
       {/* Dot Grid Background */}
       <div
@@ -32,7 +32,7 @@ export default function BrandStatement() {
       />
 
       {/* Gradient Mask for top/bottom fading */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black pointer-events-none z-0" />
 
       <div className="z-10 max-w-5xl mx-auto flex flex-wrap justify-center gap-x-[0.2em] sm:gap-x-[0.3em] gap-y-1 w-full">
         {words.map((word, i) => {
@@ -57,7 +57,7 @@ const Word = ({
   range,
 }: {
   children: React.ReactNode;
-  progress: any;
+  progress: MotionValue<number>;
   range: [number, number];
 }) => {
   // Map scroll progress to opacity

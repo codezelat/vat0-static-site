@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const services = [
   {
@@ -64,10 +65,11 @@ export default function ServicesStack() {
         className="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-screen"
         style={{ clipPath: "inset(0)" }}
       >
-        <img
+        <Image
           src="/images/hero-bg-with-grain.png"
           alt="Grain texture"
-          className="w-full h-full object-cover opacity-50 grayscale"
+          fill
+          className="object-cover opacity-50 grayscale"
         />
       </div>
       {/* 
@@ -79,7 +81,7 @@ export default function ServicesStack() {
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-white mb-4 md:mb-6">
             Our Services
           </h2>
-          <div className="w-full h-[1px] bg-neutral-800" />
+          <div className="w-full h-px bg-neutral-800" />
         </div>
 
         {services.map((service, index) => {
@@ -110,7 +112,7 @@ interface CardProps {
   features: string[];
   color: string;
   index: number;
-  progress: any;
+  progress: MotionValue<number>;
   targetScale: number;
   range: [number, number];
 }
@@ -145,7 +147,7 @@ const Card = ({
     >
       <motion.div
         style={{ scale }}
-        className={`w-full min-h-[40vh] md:min-h-[50vh] rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-12 lg:p-16 flex flex-col justify-between border border-white/10 backdrop-blur-xl shadow-2xl ${color}`}
+        className={`w-full min-h-[40vh] md:min-h-[50vh] rounded-2xl md:rounded-4xl p-5 sm:p-6 md:p-12 lg:p-16 flex flex-col justify-between border border-white/10 backdrop-blur-xl shadow-2xl ${color}`}
       >
         <div className="flex justify-between items-start">
           <span className="text-lg md:text-2xl font-mono text-neutral-500">

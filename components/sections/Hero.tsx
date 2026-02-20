@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -29,7 +29,7 @@ export default function Hero() {
     },
   };
 
-  const textVars: any = {
+  const textVars: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -41,7 +41,7 @@ export default function Hero() {
   const headline = ["Secure", "by", "Default.", "Verifiable", "at", "Release."];
 
   return (
-    <section className="w-full h-[100svh] p-6 md:p-10 lg:p-12 pb-0 md:pb-0 lg:pb-0">
+    <section className="w-full h-svh p-6 md:p-10 lg:p-12 pb-0 md:pb-0 lg:pb-0">
       <div className="relative w-full h-full max-w-7xl mx-auto rounded-2xl md:rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center bg-[#050505] border border-white/5">
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -60,12 +60,12 @@ export default function Hero() {
           />
           {/* Overlays to secure text legibility and mood while keeping image visible */}
           <div className="absolute inset-0 bg-black/50 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/90" />
         </div>
 
         {/* Interactive Background Glow */}
         <motion.div
-          className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full bg-terminal-green/15 mix-blend-screen -z-10"
+          className="absolute w-100 h-100 md:w-150 md:h-150 rounded-full bg-terminal-green/15 mix-blend-screen -z-10"
           style={{ filter: "blur(100px)" }}
           animate={{
             x: mousePosition.x * 200,
@@ -76,7 +76,7 @@ export default function Hero() {
 
         {/* Static ambient center glow */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-neutral-900/40 mix-blend-lighten pointer-events-none -z-20"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 rounded-full bg-neutral-900/40 mix-blend-lighten pointer-events-none -z-20"
           style={{ filter: "blur(120px)" }}
         />
 
@@ -111,7 +111,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 1.5 }}
             className="absolute bottom-8 flex flex-col items-center gap-3"
           >
-            <div className="w-[1px] h-8 bg-white/20" />
+            <div className="w-px h-8 bg-white/20" />
             <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-500 font-sans">
               Scroll
             </span>
