@@ -15,7 +15,7 @@ export default function TheMandate() {
     <section className="relative w-full py-32 md:py-64 bg-black overflow-hidden flex flex-col items-center justify-center px-4 sm:px-6 md:px-12">
       {/* Subtle ambient glow — no image, no color bleed */}
       <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100vw] h-[80vh] pointer-events-none z-0"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-[80vh] pointer-events-none z-0"
         style={{
           background:
             "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,255,65,0.06) 0%, transparent 70%)",
@@ -65,7 +65,7 @@ function MandateRow({ text, index }: { text: string; index: number }) {
   return (
     <div ref={ref} className="flex items-start gap-4 md:gap-8 lg:gap-12">
       {/* Animated line indicator */}
-      <div className="mt-4 md:mt-8 flex-shrink-0 w-8 md:w-16 lg:w-24 h-[2px] bg-neutral-900 relative overflow-hidden">
+      <div className="mt-4 md:mt-8 shrink-0 w-8 md:w-16 lg:w-24 h-0.5 bg-neutral-900 relative overflow-hidden">
         <motion.div
           className="absolute inset-y-0 left-0 bg-terminal-green"
           style={{ width: lineWidth }}

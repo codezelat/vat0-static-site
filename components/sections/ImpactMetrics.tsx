@@ -28,7 +28,7 @@ export default function ImpactMetrics() {
     <section className="relative w-full py-24 md:py-48 bg-black overflow-hidden px-6 md:px-12 border-t border-white/5">
       {/* Ambient center glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vw] md:w-[60vw] md:h-[60vw] rounded-full bg-terminal-green/5 mix-blend-screen pointer-events-none z-0"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-[100vw] md:w-[60vw] md:h-[60vw] rounded-full bg-terminal-green/5 mix-blend-screen pointer-events-none z-0"
         style={{ filter: "blur(120px)" }}
       />
 

@@ -58,7 +58,7 @@ export default function Vat0Framework() {
           {frameworkPillars.map((pillar, index) => (
             <div
               key={index}
-              className="w-screen h-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12 lg:px-24 flex-shrink-0 relative"
+              className="w-screen h-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12 lg:px-24 shrink-0 relative"
             >
               {/* Massive Background Letter */}
               <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none overflow-hidden select-none">
@@ -69,7 +69,7 @@ export default function Vat0Framework() {
 
               {/* Content Panel */}
               <div className="z-10 w-full max-w-4xl flex flex-col md:flex-row gap-8 md:gap-16 items-start md:items-center">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <span className="text-7xl md:text-9xl lg:text-[12rem] font-serif text-white leading-none">
                     {pillar.letter}
                   </span>
