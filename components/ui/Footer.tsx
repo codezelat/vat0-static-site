@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Left Information */}
         <div className="flex flex-col gap-6 max-w-sm">
           <span className="text-2xl font-serif text-white tracking-widest">
-            VAT0
+            VAULT ZERO
           </span>
           <p className="text-sm text-neutral-500 font-sans leading-relaxed">
             Resilient systems. Verified access. Enterprise zero-trust

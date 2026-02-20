@@ -14,24 +14,21 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-10%" }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative w-full max-w-7xl rounded-2xl md:rounded-[2.5rem] overflow-hidden p-10 md:p-24 lg:p-32 flex flex-col items-center text-center border border-red-900/30 backdrop-blur-3xl bg-[#0a0202] shadow-[0_0_100px_rgba(153,27,27,0.15)]"
+        className="relative w-full max-w-7xl rounded-2xl md:rounded-[2.5rem] overflow-hidden p-10 md:p-24 lg:p-32 flex flex-col items-center text-center border border-red-900/40 backdrop-blur-3xl bg-white/[0.02] shadow-[0_0_100px_rgba(153,27,27,0.15)]"
       >
-        {/* Grain & Red Overlays inside the glass box */}
-        <div className="absolute inset-0 z-0">
+        {/* Subtle Grain Overlay for Glass */}
+        <div className="absolute inset-0 z-0 opacity-30 pointer-events-none mix-blend-overlay">
           <Image
             src="/images/hero-bg-with-grain.png"
             alt="Red grain texture"
             fill
-            className="object-cover opacity-50 grayscale mix-blend-screen"
+            className="object-cover opacity-60 grayscale"
           />
-          {/* Deep red cinematic overlay */}
-          <div className="absolute inset-0 bg-red-950/40 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-linear-to-b from-red-900/20 via-black/60 to-black/90" />
         </div>
 
-        {/* Ambient red glow */}
+        {/* Ambient red glow behind the glass */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] rounded-full bg-red-900/20 mix-blend-screen pointer-events-none z-0"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] rounded-full bg-red-600/30 mix-blend-screen pointer-events-none z-0"
           style={{ filter: "blur(120px)" }}
         />
 
