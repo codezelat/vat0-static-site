@@ -14,7 +14,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-10%" }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative w-full max-w-7xl rounded-2xl md:rounded-[2.5rem] overflow-hidden p-10 md:p-24 lg:p-32 flex flex-col items-center text-center border border-red-900/40 backdrop-blur-3xl bg-white/[0.02] shadow-[0_0_100px_rgba(153,27,27,0.15)]"
+        className="relative w-full max-w-7xl rounded-2xl md:rounded-[2.5rem] overflow-hidden p-10 md:p-24 lg:p-32 flex flex-col items-center text-center border border-red-900/40 backdrop-blur-3xl bg-white/2 shadow-[0_0_100px_rgba(153,27,27,0.15)]"
       >
         {/* Subtle Grain Overlay for Glass */}
         <div className="absolute inset-0 z-0 opacity-30 pointer-events-none mix-blend-overlay">
