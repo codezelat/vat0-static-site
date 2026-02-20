@@ -66,8 +66,11 @@ export default function Navbar() {
 
           {/* Right side simple menu (Desktop) */}
           <div className="hidden md:flex gap-6 text-[10px] md:text-xs font-semibold text-white/80 uppercase tracking-widest z-50">
-            <Link href="#work" className="hover:text-white transition-colors">
-              Work
+            <Link
+              href="#services"
+              className="hover:text-white transition-colors"
+            >
+              Services
             </Link>
             <Link
               href="#contact"
@@ -105,11 +108,11 @@ export default function Navbar() {
                 transition={{ delay: 0.1, duration: 0.4 }}
               >
                 <Link
-                  href="#work"
+                  href="#services"
                   onClick={() => setIsMenuOpen(false)}
                   className="hover:text-terminal-green transition-colors"
                 >
-                  Work
+                  Services
                 </Link>
               </motion.div>
               <motion.div

@@ -57,6 +57,7 @@ export default function ServicesStack() {
 
   return (
     <section
+      id="services"
       ref={container}
       className="relative w-full pb-20 md:pb-32 bg-black"
     >
