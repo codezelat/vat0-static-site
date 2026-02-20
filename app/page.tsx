@@ -2,6 +2,10 @@ import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/sections/Hero";
 import BrandStatement from "@/components/sections/BrandStatement";
 import ServicesStack from "@/components/sections/ServicesStack";
+import Vat0Framework from "@/components/sections/Vat0Framework";
+import IntegrationEcosystem from "@/components/sections/IntegrationEcosystem";
+import TheMandate from "@/components/sections/TheMandate";
+import ImpactMetrics from "@/components/sections/ImpactMetrics";
 
 export default function Home() {
   return (
@@ -10,6 +14,10 @@ export default function Home() {
       <Hero />
       <BrandStatement />
       <ServicesStack />
+      <Vat0Framework />
+      <IntegrationEcosystem />
+      <TheMandate />
+      <ImpactMetrics />
     </main>
   );
 }
