@@ -34,14 +34,14 @@ export default function BrandStatement() {
       {/* Gradient Mask for top/bottom fading */}
       <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black pointer-events-none z-0" />
 
-      <div className="z-10 max-w-5xl mx-auto flex flex-wrap justify-center gap-x-[0.2em] sm:gap-x-[0.3em] gap-y-1 w-full">
+      <div className="z-10 max-w-6xl mx-auto flex flex-wrap justify-center gap-x-3 sm:gap-x-4 md:gap-x-5 gap-y-2 w-full">
         {words.map((word, i) => {
-          // Calculate when each word should start and finish fading in based on horizontal position in string
+          // Calculate when each word should start and finish fading in
           const start = i / words.length;
-          const end = start + 1 / words.length;
+          const end = Math.min(start + 1.5 / words.length, 1);
 
           return (
-            <Word key={i} progress={scrollYProgress} range={[start, end]}>
+            <Word key={`${word}-${i}`} progress={scrollYProgress} range={[start, end]}>
               {word}
             </Word>
           );
@@ -60,13 +60,21 @@ const Word = ({
   progress: MotionValue<number>;
   range: [number, number];
 }) => {
-  // Map scroll progress to opacity
+  // Map scroll progress to opacity - fade from ghost to full
   const opacity = useTransform(progress, range, [0.15, 1]);
 
   return (
-    <span className="relative inline-block text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-sans font-medium text-white/90 tracking-tight leading-snug">
-      <span className="absolute opacity-15">{children}</span>
-      <motion.span style={{ opacity }}>{children}</motion.span>
+    <span className="relative inline-block text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-sans font-medium tracking-tight leading-tight">
+      {/* Ghost text - always visible at low opacity */}
+      <span className="text-white/[0.08]">{children}</span>
+      
+      {/* Animated overlay - fades in on scroll */}
+      <motion.span 
+        className="absolute inset-0 text-white"
+        style={{ opacity }}
+      >
+        {children}
+      </motion.span>
     </span>
   );
 };

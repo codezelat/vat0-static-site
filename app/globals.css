@@ -56,3 +56,84 @@ html.lenis body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   mix-blend-mode: overlay;
 }
+
+/* ==========================================================================
+   Animation Keyframes
+   ========================================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 40%;
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  opacity: 0;
+}
+
+.animate-expand-width {
+  animation: expandWidth 1s ease-out 0.5s forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}

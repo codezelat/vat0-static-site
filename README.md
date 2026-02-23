@@ -1,10 +1,14 @@
 <p align="center">
   <br />
-  <img width="120" src="https://img.shields.io/badge/V_A_T_0-000000?style=for-the-badge&labelColor=000&color=000" alt="VAT0" />
+  <img width="180" src="https://img.shields.io/badge/V_A_T_0-000000?style=for-the-badge&labelColor=000&color=00ff41" alt="VAT0" />
   <br /><br />
   <strong>VAulTzer0 — Enterprise Zero Trust Architecture</strong>
   <br />
   <sub>Verify. Authorize. Track. Zero implicit trust.</sub>
+  <br /><br />
+  <a href="https://vat0.lk" target="_blank">🌐 vat0.lk</a> • 
+  <a href="mailto:info@vat0.lk">📧 info@vat0.lk</a> • 
+  <a href="tel:+94114858899">📞 +94 11 485 8899</a>
 </p>
 
 <p align="center">
@@ -24,11 +28,17 @@
 
 ## 🏛️ About
 
-**VAT0** (pronounced _Vault Zero_) is a high-fidelity, award-quality static marketing website for a cybersecurity and zero-trust infrastructure consultancy. Every section is meticulously engineered with scroll-driven animations, glassmorphism, cinematic textures, and interactive micro-interactions to deliver a visceral, premium digital experience that commands authority.
+**VAT0** (pronounced *Vault Zero*) is a high-fidelity, award-quality static marketing website for a cybersecurity and zero-trust infrastructure consultancy. Every section is meticulously engineered with scroll-driven animations, glassmorphism, cinematic textures, and interactive micro-interactions to deliver a visceral, premium digital experience that commands authority.
 
 The site embodies a dark brutalist editorial aesthetic — the kind you'd associate with the world's most forward-thinking security firms and AI research labs. There are no stock templates here. Every pixel serves a purpose.
 
 > _"We architect resilient digital infrastructure that is secure by default. Verify. Authorize. Track. Zero implicit trust."_
+
+**Company:** VAulTzer0 Security — A Division of Codezela Technologies (Pvt) Ltd  
+**Location:** 345/35, RIT Alles Mw, Colombo 08, 00800, Sri Lanka  
+**Website:** [https://vat0.lk](https://vat0.lk)  
+**Email:** info@vat0.lk  
+**Phone:** +94 11 485 8899
 
 <br />
 
@@ -54,20 +64,20 @@ Every animation is scroll-linked via Framer Motion's `useScroll` + `useTransform
 
 ### Color Strategy
 
-| Role                   | Color            | Hex                        | Usage                                                  |
-| ---------------------- | ---------------- | -------------------------- | ------------------------------------------------------ |
-| **Background**   | Pure Black       | `#000000`                | The canvas. Every section lives on absolute darkness.  |
-| **Foreground**   | White            | `#FFFFFF`                | Headlines, primary text, interactive elements.         |
-| **Accent**       | Terminal Green   | `#00FF41`                | Indicators, divider lines, hover states, status dots.  |
-| **CTA / Danger** | Deep Red         | `#7F1D1D` — `#DC2626` | Contact section — urgency, threat readiness branding. |
-| **Muted**        | Neutral 400–600 | `#A3A3A3` — `#525252` | Descriptions, secondary text, inactive states.         |
+| Role | Color | Hex | Usage |
+|------|-------|-----|-------|
+| **Background** | Pure Black | `#000000` | The canvas. Every section lives on absolute darkness. |
+| **Foreground** | White | `#FFFFFF` | Headlines, primary text, interactive elements. |
+| **Accent** | Terminal Green | `#00FF41` | Indicators, divider lines, hover states, status dots. |
+| **CTA / Danger** | Deep Red | `#7F1D1D` — `#DC2626` | Contact section — urgency, threat readiness branding. |
+| **Muted** | Neutral 400–600 | `#A3A3A3` — `#525252` | Descriptions, secondary text, inactive states. |
 
 ### Typography
 
-| Family                 | Source                      | Usage                                                         |
-| ---------------------- | --------------------------- | ------------------------------------------------------------- |
-| **Geist Sans**   | Vercel / Google Fonts       | Body text, descriptions, UI elements, paragraphs              |
-| **Geist Mono**   | Vercel / Google Fonts       | Labels, category headers, technical metadata, navigation      |
+| Family | Source | Usage |
+|--------|--------|-------|
+| **Geist Sans** | Vercel / Google Fonts | Body text, descriptions, UI elements, paragraphs |
+| **Geist Mono** | Vercel / Google Fonts | Labels, category headers, technical metadata, navigation |
 | **System Serif** | Browser default serif stack | Headlines, hero text, section titles, the massive footer logo |
 
 <br />
@@ -78,17 +88,17 @@ Every animation is scroll-linked via Framer Motion's `useScroll` + `useTransform
 
 ## 🛠️ Tech Stack
 
-| Technology                                                         | Version | Role                                                                             |
-| ------------------------------------------------------------------ | ------- | -------------------------------------------------------------------------------- |
-| [**Next.js**](https://nextjs.org)                               | 16.1.6  | React meta-framework — App Router, static export, Turbopack bundler             |
-| [**React**](https://react.dev)                                  | 19.2.3  | Component architecture, hooks, and concurrent rendering                          |
-| [**TypeScript**](https://typescriptlang.org)                    | 5.x     | End-to-end static type safety across all components                              |
-| [**Tailwind CSS**](https://tailwindcss.com)                     | 4.x     | Utility-first styling with `@theme` inline tokens and PostCSS integration      |
-| [**Framer Motion**](https://motion.dev)                         | 12.34.x | Scroll-linked animations,`AnimatePresence`, layout transitions, spring physics |
-| [**Lenis**](https://lenis.darkroom.engineering)                 | 1.3.x   | Buttery-smooth 60fps scroll normalization and momentum                           |
-| [**Lucide React**](https://lucide.dev)                          | 0.575.x | Minimal, tree-shakeable, consistent SVG icon library                             |
-| [**clsx**](https://github.com/lukeed/clsx)                      | 2.1.x   | Conditional className composition                                                |
-| [**tailwind-merge**](https://github.com/dcastil/tailwind-merge) | 3.5.x   | Intelligent Tailwind class deduplication (used in `cn()` utility)              |
+| Technology | Version | Role |
+|------------|---------|------|
+| [**Next.js**](https://nextjs.org) | 16.1.6 | React meta-framework — App Router, static export, Turbopack bundler |
+| [**React**](https://react.dev) | 19.2.3 | Component architecture, hooks, and concurrent rendering |
+| [**TypeScript**](https://typescriptlang.org) | 5.x | End-to-end static type safety across all components |
+| [**Tailwind CSS**](https://tailwindcss.com) | 4.x | Utility-first styling with `@theme` inline tokens and PostCSS integration |
+| [**Framer Motion**](https://motion.dev) | 12.34.x | Scroll-linked animations, `AnimatePresence`, layout transitions, spring physics |
+| [**Lenis**](https://lenis.darkroom.engineering) | 1.3.x | Buttery-smooth 60fps scroll normalization and momentum |
+| [**Lucide React**](https://lucide.dev) | 0.575.x | Minimal, tree-shakeable, consistent SVG icon library |
+| [**clsx**](https://github.com/lukeed/clsx) | 2.1.x | Conditional className composition |
+| [**tailwind-merge**](https://github.com/dcastil/tailwind-merge) | 3.5.x | Intelligent Tailwind class deduplication (used in `cn()` utility) |
 
 <br />
 
@@ -102,25 +112,36 @@ Every animation is scroll-linked via Framer Motion's `useScroll` + `useTransform
 vat0-static-site/
 │
 ├── app/                              # Next.js App Router
-│   ├── layout.tsx                    # Root layout — Geist fonts, LenisProvider, dark mode
-│   ├── page.tsx                      # Page composition — sequential section assembly
-│   ├── globals.css                   # CSS custom properties, Lenis styles, grain utility
-│   └── favicon.ico                   # Site favicon
+│   ├── api/                          # API Routes
+│   │   └── contact/                  # Contact form handler with Brevo email
+│   ├── privacy/                      # Privacy Policy page
+│   ├── terms/                        # Terms of Service page
+│   ├── globals.css                   # CSS custom properties, Lenis styles
+│   ├── layout.tsx                    # Root layout — Geist fonts, analytics, schema
+│   ├── not-found.tsx                 # 404 error page
+│   ├── page.tsx                      # Homepage composition
+│   ├── robots.ts                     # robots.txt generator
+│   └── sitemap.ts                    # sitemap.xml generator
 │
 ├── components/
 │   ├── ui/                           # Persistent UI chrome
 │   │   ├── Navbar.tsx                # Floating glassmorphic pill navigation
-│   │   └── Footer.tsx                # Industrial footer with expanding logo animation
+│   │   ├── Footer.tsx                # Industrial footer with expanding logo
+│   │   ├── CookieConsent.tsx         # GDPR-compliant cookie banner
+│   │   └── ContactModal.tsx          # Contact form with Turnstile
 │   │
-│   └── sections/                     # Page content sections (rendered top to bottom)
-│       ├── Hero.tsx                   # [1] Full-viewport hero with grain & mouse glow
-│       ├── BrandStatement.tsx         # [2] Scroll-progressive word reveal
-│       ├── ServicesStack.tsx          # [3] Sticky stacking cards with parallax
-│       ├── Vat0Framework.tsx          # [4] Horizontal scroll — V, A, T, 0 pillars
-│       ├── IntegrationEcosystem.tsx   # [5] Infinite tech partner marquee
-│       ├── TheMandate.tsx             # [6] Bidirectional scroll-linked statements
-│       ├── ImpactMetrics.tsx          # [7] Cascading stat counters
-│       └── Contact.tsx                # [8] Glassmorphic red CTA card
+│   ├── sections/                     # Page content sections
+│   │   ├── Hero.tsx                  # [1] Full-viewport hero with grain & mouse glow
+│   │   ├── BrandStatement.tsx        # [2] Scroll-progressive word reveal
+│   │   ├── ServicesStack.tsx         # [3] Sticky stacking cards with parallax
+│   │   ├── Vat0Framework.tsx         # [4] Horizontal scroll — V, A, T, 0 pillars
+│   │   ├── IntegrationEcosystem.tsx  # [5] Infinite tech partner marquee
+│   │   ├── TheMandate.tsx            # [6] Bidirectional scroll-linked statements
+│   │   ├── ImpactMetrics.tsx         # [7] Cascading stat counters
+│   │   └── Contact.tsx               # [8] Glassmorphic red CTA card
+│   │
+│   ├── GoogleAnalytics.tsx           # GA4 with cookie consent integration
+│   └── StructuredData.tsx            # Schema.org LocalBusiness markup
 │
 ├── providers/
 │   └── LenisProvider.tsx             # Client-side smooth scroll wrapper
@@ -129,12 +150,16 @@ vat0-static-site/
 │   └── utils.ts                      # cn() — clsx + tailwind-merge utility
 │
 ├── public/
-│   └── images/                       # Static assets (hero background, grain textures)
+│   └── images/                       # Static assets
+│       ├── hero-bg-with-grain.png    # Hero background texture
+│       ├── hero-bg.png               # Alternative hero background
+│       └── og-image.jpg              # Open Graph social image (1200×630)
 │
+├── .env.example                      # Environment variables template
 ├── package.json                      # Dependencies and scripts
 ├── tsconfig.json                     # TypeScript configuration
-├── postcss.config.mjs                # PostCSS with Tailwind CSS v4 plugin
-├── eslint.config.mjs                 # ESLint with Next.js recommended rules
+├── postcss.config.mjs                # PostCSS with Tailwind CSS v4
+├── eslint.config.mjs                 # ESLint with Next.js rules
 ├── next.config.ts                    # Next.js configuration
 ├── LICENSE                           # MIT License
 └── README.md                         # This file
@@ -148,7 +173,7 @@ vat0-static-site/
 
 ## 📖 Section-by-Section Deep Dive
 
-The page is composed of **10 distinct sections**, each with unique animation systems, backgrounds, and interaction patterns. Here's the full breakdown:
+The page is composed of **10 distinct sections**, each with unique animation systems, backgrounds, and interaction patterns.
 
 <br />
 
@@ -163,8 +188,9 @@ A **glassmorphic pill** that hovers at the top of the page. Built with:
 - The logo defaults to `VAulTzer0` and **vertically transitions** to `VAT0` (in terminal-green italic) on hover using `motion.div` with `opacity` + `y` transforms
 - An invisible structural spacer `<span>` prevents layout shift during the logo animation
 - **Mobile:** A full-screen overlay (`bg-[#050505]/95 backdrop-blur-xl`) with staggered, sequentially animated link entries
+- **Smart Navigation:** Detects current page — smooth scrolls on homepage, navigates to anchors on other pages
 
-**Navigation Links:** Services (`#services`) and Contact (`#contact`) — both anchor to their respective section `id` attributes.
+**Navigation Links:** Services (`/#services`) and Contact (`/#contact`) — both work from any page.
 
 <br />
 
@@ -192,7 +218,7 @@ A full manifesto sentence revealed **word by word** as the user scrolls:
 
 - Uses `useScroll` targeting this section's ref with offset `["start 0.7", "center 0.4"]`
 - Each word calculates its reveal range based on its position in the array
-- Words start at `opacity: 0.15` (ghosted) and transition to `opacity: 1` (full white)
+- Words start at `opacity: 0.08` (ghosted) and transition to `opacity: 1` (full white)
 - A subtle dot-grid CSS background (`radial-gradient` at 40px spacing) provides texture
 - Gradient masks at top and bottom fade the dot grid into pure black
 
@@ -204,11 +230,11 @@ A full manifesto sentence revealed **word by word** as the user scrolls:
 
 Three service cards that **stack on top of each other** as the user scrolls:
 
-| Card | Service                       | Key Features                                                                                      |
-| ---- | ----------------------------- | ------------------------------------------------------------------------------------------------- |
-| 01   | Cybersecurity & Zero Trust    | Zero Trust Architecture, Penetration Testing, Vulnerability Management, Identity & Access Control |
-| 02   | DevSecOps & Cloud Engineering | CI/CD Pipeline Design, Infrastructure as Code, Container Security, Continuous Deployment          |
-| 03   | Quality Engineering (QA)      | Automated Testing, Performance & Load Testing, Security Code Review, Release Validation           |
+| Card | Service | Key Features |
+|------|---------|--------------|
+| 01 | Cybersecurity & Zero Trust | Zero Trust Architecture, Penetration Testing, Vulnerability Management, Identity & Access Control |
+| 02 | DevSecOps & Cloud Engineering | CI/CD Pipeline Design, Infrastructure as Code, Container Security, Continuous Deployment |
+| 03 | Quality Engineering (QA) | Automated Testing, Performance & Load Testing, Security Code Review, Release Validation |
 
 - Each card is `position: sticky` with a calculated top offset (`12vh + index * 20px`)
 - As the user scrolls past a card, it **scales down** via `useTransform` — earlier cards shrink to 0.85x while later cards remain at full scale
@@ -225,12 +251,12 @@ Three service cards that **stack on top of each other** as the user scrolls:
 
 The entire VAT0 methodology — **Verification, Authorization, Tracking, Zero** — presented as full-width horizontal scroll panels:
 
-| Panel | Letter      | Title         | Description                                                              |
-| ----- | ----------- | ------------- | ------------------------------------------------------------------------ |
-| 1     | **V** | Verification  | All users, services, and requests validated before access is granted     |
-| 2     | **A** | Authorization | Granular, contextual, time-bound permissions without standing privileges |
-| 3     | **T** | Tracking      | All actions logged, auditable, timestamped, and attributable             |
-| 4     | **0** | Zero          | Zero Trust Architecture principles governing all infrastructure          |
+| Panel | Letter | Title | Description |
+|-------|--------|-------|-------------|
+| 1 | **V** | Verification | All users, services, and requests validated before access is granted |
+| 2 | **A** | Authorization | Granular, contextual, time-bound permissions without standing privileges |
+| 3 | **T** | Tracking | All actions logged, auditable, timestamped, and attributable |
+| 4 | **0** | Zero | Zero Trust Architecture principles governing all infrastructure |
 
 - The section is `h-[400vh]` and contains a `sticky top-0 h-screen` inner container
 - `useTransform(scrollYProgress, [0, 1], ["0%", "-75%"])` drives the horizontal translation
@@ -286,10 +312,10 @@ Below the mandates, a supporting paragraph fades in with the key phrase `"deny-a
 
 Key numbers that establish credibility:
 
-| Metric              | Value         | Description                                                                             |
-| ------------------- | ------------- | --------------------------------------------------------------------------------------- |
-| Years of Experience | **06+** | Building secure, scalable deployment pipelines for enterprise platforms                 |
-| Projects Secured    | **70+** | Delivering robust IaC, runtime observation, and zero-day threat readiness               |
+| Metric | Value | Description |
+|--------|-------|-------------|
+| Years of Experience | **06+** | Building secure, scalable deployment pipelines for enterprise platforms |
+| Projects Secured | **70+** | Delivering robust IaC, runtime observation, and zero-day threat readiness |
 | Industries Hardened | **18+** | Cross-pollinating security strategies across finance, healthcare, AI, and manufacturing |
 
 - Each metric card uses `whileInView` with `once: true` and a cascading `delay: index * 0.15` for a left-to-right staggered reveal
@@ -314,6 +340,12 @@ The conversion section — designed to command action:
 - The subheading uses `font-mono text-red-500` uppercase tracking for a military-style label
 - The entire card fades in from `y: 50` with a 1-second duration
 
+**Clicking the button opens the Contact Modal with:**
+- 8-field professional form (Name, Company, Email, Phone, Service, Budget, Message)
+- Cloudflare Turnstile spam protection
+- Brevo email integration
+- Success/error states
+
 <br />
 
 ### 10. 🏗️ Footer — `components/ui/Footer.tsx`
@@ -327,10 +359,10 @@ A minimal, authoritative footer with three zones:
 - Brand name `"VAULT ZERO"` in serif tracking-widest
 - A concise brand description in neutral-500
 
-**Right Grid (2–3 columns):**
+**Right Grid (3 columns):**
 
 - **Practice Areas:** VAT0 Secure, VAT0 Ship, VAT0 Verify, Zero Trust
-- **Company:** Architecture, Contact, Privacy & Terms
+- **Company:** Contact, Privacy Policy, Terms of Service
 - **Connect:** LinkedIn, Facebook, Instagram, X
 
 **Massive Expanding Logo:**
@@ -356,9 +388,9 @@ A thin `border-white/10` divider with `VAulTzer0 Security by Codezela Technologi
 ### Prerequisites
 
 | Requirement | Minimum Version |
-| ----------- | --------------- |
-| Node.js     | 18.17+          |
-| npm         | 9+              |
+|-------------|-----------------|
+| Node.js | 18.17+ |
+| npm | 9+ |
 
 ### Installation
 
@@ -407,6 +439,54 @@ Runs ESLint with the Next.js recommended configuration.
 
 <br />
 
+## 🔐 Environment Variables
+
+Copy `.env.example` to `.env.local` and fill in your values:
+
+```bash
+cp .env.example .env.local
+```
+
+### Required Variables
+
+| Variable | Description | How to Get |
+|----------|-------------|------------|
+| `BREVO_API_KEY` | Sendinblue API key for contact emails | [brevo.com](https://www.brevo.com) → Settings → API Keys |
+| `CLOUDFLARE_TURNSTILE_SECRET_KEY` | Server-side secret for spam protection | [Cloudflare Dashboard](https://dash.cloudflare.com) → Turnstile |
+| `NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY` | Client-side site key for Turnstile | Same as above |
+
+### Optional Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `CONTACT_EMAIL` | info@vat0.lk | Where contact form submissions are sent |
+| `FROM_EMAIL` | noreply@vat0.lk | Sender address for automated emails |
+
+### Setting Up Brevo (Email)
+
+1. Sign up at [brevo.com](https://www.brevo.com)
+2. Go to **Settings** → **API Keys**
+3. Create a new key with **"Transactional emails"** permission
+4. Copy the key to `BREVO_API_KEY`
+5. (Optional) Verify your domain for better deliverability
+
+### Setting Up Cloudflare Turnstile (Spam Protection)
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
+2. Navigate to **Turnstile** (left sidebar)
+3. Click **"Add Site"**
+4. **Site Name:** VAT0 Website
+5. **Domain:** vat0.lk
+6. **Widget Type:** Managed
+7. Copy **Site Key** → `NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY`
+8. Copy **Secret Key** → `CLOUDFLARE_TURNSTILE_SECRET_KEY`
+
+<br />
+
+---
+
+<br />
+
 ## 🎛️ Design Tokens & Theme System
 
 The design system is centralized in `app/globals.css` using CSS custom properties and Tailwind v4's `@theme inline` directive:
@@ -428,11 +508,11 @@ The design system is centralized in `app/globals.css` using CSS custom propertie
 
 ### Custom CSS Utilities
 
-| Utility            | Purpose                                                                                                                    |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| `.bg-noise`      | Applies an SVG-based fractal noise texture via `::before` pseudo-element at 15% opacity with `mix-blend-mode: overlay` |
-| `.lenis-smooth`  | Disables native `scroll-behavior` to let Lenis handle all scroll normalization                                           |
-| `.lenis-stopped` | Sets `overflow: hidden` when Lenis scroll is programmatically paused                                                     |
+| Utility | Purpose |
+|---------|---------|
+| `.bg-noise` | Applies an SVG-based fractal noise texture via `::before` pseudo-element at 15% opacity with `mix-blend-mode: overlay` |
+| `.lenis-smooth` | Disables native `scroll-behavior` to let Lenis handle all scroll normalization |
+| `.lenis-stopped` | Sets `overflow: hidden` when Lenis scroll is programmatically paused |
 
 <br />
 
@@ -442,16 +522,16 @@ The design system is centralized in `app/globals.css` using CSS custom propertie
 
 ## ⚡ Performance Characteristics
 
-| Aspect                      | Implementation                                                                              |
-| --------------------------- | ------------------------------------------------------------------------------------------- |
-| **Rendering**         | Static Generation (SSG) — all pages pre-rendered at build time                             |
-| **Bundler**           | Turbopack — sub-second hot reloads during development                                      |
-| **Images**            | `next/image` with automatic WebP/AVIF format negotiation and lazy loading                 |
-| **Scrolling**         | Lenis provides 60fps butter-smooth scroll normalization with configurable lerp and duration |
-| **CSS**               | Tailwind v4 purges all unused classes at build time — minimal CSS payload                  |
-| **JavaScript**        | Tree-shaking via Turbopack — only used Framer Motion features are bundled                  |
-| **External Requests** | Zero runtime API calls — fully self-contained static site                                  |
-| **Font Loading**      | `next/font/google` with `display: swap` — no layout shift, no FOUT                     |
+| Aspect | Implementation |
+|--------|----------------|
+| **Rendering** | Static Generation (SSG) — all pages pre-rendered at build time |
+| **Bundler** | Turbopack — sub-second hot reloads during development |
+| **Images** | `next/image` with automatic WebP/AVIF format negotiation and lazy loading |
+| **Scrolling** | Lenis provides 60fps butter-smooth scroll normalization with configurable lerp and duration |
+| **CSS** | Tailwind v4 purges all unused classes at build time — minimal CSS payload |
+| **JavaScript** | Tree-shaking via Turbopack — only used Framer Motion features are bundled |
+| **External Requests** | Zero runtime API calls — fully self-contained static site |
+| **Font Loading** | `next/font/google` with `display: swap` — no layout shift, no FOUT |
 
 <br />
 
@@ -461,13 +541,13 @@ The design system is centralized in `app/globals.css` using CSS custom propertie
 
 ## 🔧 Configuration Files
 
-| File                   | Purpose                                                               |
-| ---------------------- | --------------------------------------------------------------------- |
-| `next.config.ts`     | Next.js runtime configuration                                         |
-| `tsconfig.json`      | TypeScript compiler options with strict mode and `@/` path aliases  |
+| File | Purpose |
+|------|---------|
+| `next.config.ts` | Next.js runtime configuration |
+| `tsconfig.json` | TypeScript compiler options with strict mode and `@/` path aliases |
 | `postcss.config.mjs` | PostCSS pipeline with `@tailwindcss/postcss` plugin for Tailwind v4 |
-| `eslint.config.mjs`  | ESLint with `eslint-config-next` for Next.js-specific linting rules |
-| `package.json`       | Dependency manifest and npm scripts                                   |
+| `eslint.config.mjs` | ESLint with `eslint-config-next` for Next.js-specific linting rules |
+| `package.json` | Dependency manifest and npm scripts |
 
 <br />
 
@@ -494,12 +574,12 @@ The design system is centralized in `app/globals.css` using CSS custom propertie
 
 ## 🌍 Browser Support
 
-| Browser       | Support                                     |
-| ------------- | ------------------------------------------- |
-| Chrome / Edge | ✅ Full support (latest 2 versions)         |
-| Firefox       | ✅ Full support (latest 2 versions)         |
-| Safari        | ✅ Full support (latest 2 versions)         |
-| Mobile Chrome | ✅ Full support — touch events enabled     |
+| Browser | Support |
+|---------|---------|
+| Chrome / Edge | ✅ Full support (latest 2 versions) |
+| Firefox | ✅ Full support (latest 2 versions) |
+| Safari | ✅ Full support (latest 2 versions) |
+| Mobile Chrome | ✅ Full support — touch events enabled |
 | Mobile Safari | ✅ Full support —`100svh` viewport units |
 
 <br />
@@ -536,11 +616,13 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 🔗 Links
 
-| Resource               | URL                                                                                 |
-| ---------------------- | ----------------------------------------------------------------------------------- |
-| **Live Site**    | Coming Soon                                                                         |
-| **Organization** | [Codezela Technologies](https://codezela.com)                                          |
-| **Repository**   | [github.com/codezelat/vat0-static-site](https://github.com/codezelat/vat0-static-site) |
+| Resource | URL |
+|----------|-----|
+| **Live Site** | [https://vat0.lk](https://vat0.lk) |
+| **Organization** | [Codezela Technologies](https://codezela.com) |
+| **Repository** | [github.com/codezelat/vat0-static-site](https://github.com/codezelat/vat0-static-site) |
+| **Email** | [info@vat0.lk](mailto:info@vat0.lk) |
+| **Phone** | [+94 11 485 8899](tel:+94114858899) |
 
 <br />
 
@@ -549,6 +631,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 <p align="center">
   <br />
   <sub><strong>VAulTzer0 Security</strong> — A Division of Codezela Technologies (Pvt) Ltd.</sub>
+  <br />
+  <sub>345/35, RIT Alles Mw, Colombo 08, 00800, Sri Lanka</sub>
   <br />
   <sub>Built for scale. Secured by default.</sub>
   <br /><br />

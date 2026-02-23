@@ -3,11 +3,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
@@ -17,6 +20,59 @@ export default function Navbar() {
       document.body.style.overflow = "auto";
     }
   }, [isMenuOpen]);
+
+  // For touch devices (no hover), autoplay the logo expansion every few seconds.
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+
+    const mq = window.matchMedia("(hover: none)");
+    let intervalId: number | undefined;
+
+    const start = () => {
+      if (intervalId !== undefined) return;
+      intervalId = window.setInterval(() => {
+        setIsHovered((s) => !s);
+      }, 3000);
+    };
+
+    const stop = () => {
+      if (intervalId !== undefined) {
+        clearInterval(intervalId);
+        intervalId = undefined;
+      }
+      setIsHovered(false);
+    };
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches && !isMenuOpen) start();
+      else stop();
+    };
+
+    if (mq.matches && !isMenuOpen) start();
+
+    if (mq.addEventListener) mq.addEventListener("change", handleChange);
+    else mq.addListener(handleChange as any);
+
+    return () => {
+      stop();
+      if (mq.removeEventListener)
+        mq.removeEventListener("change", handleChange);
+      else mq.removeListener(handleChange as any);
+    };
+  }, [isMenuOpen]);
+
+  // Handle smooth scroll for anchor links
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    if (isHomePage) {
+      e.preventDefault();
+      const element = document.querySelector(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    // If not on homepage, let the Link component handle navigation
+    setIsMenuOpen(false);
+  };
 
   return (
     <>
@@ -29,6 +85,8 @@ export default function Navbar() {
             className="group relative flex items-center h-8 overflow-hidden text-white text-base md:text-lg font-bold tracking-tight z-50"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onFocus={() => setIsHovered(true)}
+            onBlur={() => setIsHovered(false)}
             onClick={() => setIsMenuOpen(false)}
           >
             {/* Default Logo */}
@@ -41,7 +99,8 @@ export default function Navbar() {
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              VAulTzer0
+              <span>VAulTzer</span>
+              <span className="font-mono tabular-nums">0</span>
             </motion.div>
 
             {/* Hover Logo (VAT0) */}
@@ -54,25 +113,29 @@ export default function Navbar() {
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              VAT0
+              <span>VAT</span>
+              <span className="font-mono tabular-nums">0</span>
             </motion.div>
 
             {/* Invisible structural spacer to keep the layout size correct */}
             <span className="opacity-0 pointer-events-none select-none">
-              VAulTzer0
+              VAulTzer
+              <span className="font-mono tabular-nums">0</span>
             </span>
           </Link>
 
           {/* Right side simple menu (Desktop) */}
           <div className="hidden md:flex gap-6 text-[10px] md:text-xs font-semibold text-white/80 uppercase tracking-widest z-50">
             <Link
-              href="#services"
+              href={isHomePage ? "#services" : "/#services"}
+              onClick={(e) => handleAnchorClick(e, "#services")}
               className="hover:text-white transition-colors"
             >
               Services
             </Link>
             <Link
-              href="#contact"
+              href={isHomePage ? "#contact" : "/#contact"}
+              onClick={(e) => handleAnchorClick(e, "#contact")}
               className="hover:text-white transition-colors"
             >
               Contact
@@ -107,8 +170,8 @@ export default function Navbar() {
                 transition={{ delay: 0.1, duration: 0.4 }}
               >
                 <Link
-                  href="#services"
-                  onClick={() => setIsMenuOpen(false)}
+                  href={isHomePage ? "#services" : "/#services"}
+                  onClick={(e) => handleAnchorClick(e, "#services")}
                   className="hover:text-terminal-green transition-colors"
                 >
                   Services
@@ -120,8 +183,8 @@ export default function Navbar() {
                 transition={{ delay: 0.2, duration: 0.4 }}
               >
                 <Link
-                  href="#contact"
-                  onClick={() => setIsMenuOpen(false)}
+                  href={isHomePage ? "#contact" : "/#contact"}
+                  onClick={(e) => handleAnchorClick(e, "#contact")}
                   className="hover:text-terminal-green transition-colors"
                 >
                   Contact
