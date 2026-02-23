@@ -16,6 +16,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
   title: "VAulTzer0 | Enterprise Zero Trust Security Solutions Sri Lanka",
   description:
@@ -81,9 +88,6 @@ export const metadata: Metadata = {
     images: ["/images/og-image.jpg"],
     creator: "@vaultzer0",
     site: "@vaultzer0",
-  },
-  other: {
-    "theme-color": "#000000",
   },
   category: "Cybersecurity",
 };

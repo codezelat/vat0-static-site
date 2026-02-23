@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -45,10 +46,8 @@ export default function Hero() {
       <div className="relative w-full h-full max-w-7xl mx-auto rounded-2xl md:rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center bg-[#050505] border border-white/5">
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <motion.img
-            src="/images/hero-bg-with-grain.png"
-            alt="Hero abstract background"
-            className="w-full h-full object-cover object-center origin-center"
+          <motion.div
+            className="absolute inset-0"
             animate={{
               scale: [1, 1.05, 1],
             }}
@@ -57,7 +56,17 @@ export default function Hero() {
               repeat: Infinity,
               ease: "linear",
             }}
-          />
+          >
+            <Image
+              src="/images/hero-bg-with-grain.png"
+              alt="Hero abstract background"
+              fill
+              priority
+              quality={85}
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          </motion.div>
           {/* Overlays to secure text legibility and mood while keeping image visible */}
           <div className="absolute inset-0 bg-black/50 mix-blend-multiply" />
           <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/90" />
