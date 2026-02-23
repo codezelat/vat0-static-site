@@ -61,18 +61,8 @@ export default function ServicesStack() {
       ref={container}
       className="relative w-full pb-20 md:pb-32 bg-black"
     >
-      {/* Grainy Texture Background */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-screen"
-        style={{ clipPath: "inset(0)" }}
-      >
-        <Image
-          src="/images/hero-bg-with-grain.png"
-          alt="Grain texture"
-          fill
-          className="object-cover opacity-50 grayscale"
-        />
-      </div>
+      {/* Subtle gradient background instead of heavy image */}
+      <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-b from-black via-neutral-950 to-black opacity-50" />
       {/* 
         The parent is relative, but each card container inside will be sticky.
         We add enough top padding to ensure the cards start stacking neatly.

@@ -9,11 +9,15 @@ import { StructuredData } from "@/components/StructuredData";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const viewport = {
@@ -24,6 +28,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vat0.lk"),
   title: "VAulTzer0 | Enterprise Zero Trust Security Solutions Sri Lanka",
   description:
     "VAulTzer0 (VAT0) is Sri Lanka's premier enterprise cybersecurity consultancy specializing in zero trust architecture, DevSecOps, cloud security, penetration testing, and vulnerability management. We deliver world-class security solutions for enterprises in Colombo and across the globe.",
@@ -47,7 +52,6 @@ export const metadata: Metadata = {
   authors: [{ name: "VAulTzer0", url: "https://vat0.lk" }],
   creator: "VAulTzer0 (VAT0)",
   publisher: "VAulTzer0 (VAT0)",
-  metadataBase: new URL("https://vat0.lk"),
   alternates: {
     canonical: "/",
   },

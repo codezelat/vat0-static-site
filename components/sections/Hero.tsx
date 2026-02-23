@@ -44,10 +44,10 @@ export default function Hero() {
   return (
     <section className="w-full h-svh p-6 md:p-10 lg:p-12 pb-0 md:pb-0 lg:pb-0">
       <div className="relative w-full h-full max-w-7xl mx-auto rounded-2xl md:rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center bg-[#050505] border border-white/5">
-        {/* Background Image Container */}
+        {/* Background Image Container - LCP Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <motion.div
-            className="absolute inset-0"
+            className="absolute inset-0 will-change-transform"
             animate={{
               scale: [1, 1.05, 1],
             }}
@@ -62,9 +62,12 @@ export default function Hero() {
               alt="Hero abstract background"
               fill
               priority
-              quality={85}
+              fetchPriority="high"
+              quality={75}
               sizes="100vw"
               className="object-cover object-center"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkLzZBPLDx8fHV9ZILOn5qe4yOjp8gXj48Xj48UXuOk5SVmKOWk///2wBDAR..."
             />
           </motion.div>
           {/* Overlays to secure text legibility and mood while keeping image visible */}
@@ -74,7 +77,7 @@ export default function Hero() {
 
         {/* Interactive Background Glow */}
         <motion.div
-          className="absolute w-100 h-100 md:w-150 md:h-150 rounded-full bg-terminal-green/15 mix-blend-screen -z-10"
+          className="absolute w-100 h-100 md:w-150 md:h-150 rounded-full bg-terminal-green/15 mix-blend-screen -z-10 will-change-transform"
           style={{ filter: "blur(100px)" }}
           animate={{
             x: mousePosition.x * 200,

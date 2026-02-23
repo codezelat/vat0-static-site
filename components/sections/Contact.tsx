@@ -24,15 +24,8 @@ export default function Contact() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative w-full max-w-7xl rounded-2xl md:rounded-[2.5rem] overflow-hidden p-10 md:p-24 lg:p-32 flex flex-col items-center text-center border border-red-900/40 backdrop-blur-3xl bg-white/2 shadow-[0_0_100px_rgba(153,27,27,0.15)]"
         >
-          {/* Subtle Grain Overlay for Glass */}
-          <div className="absolute inset-0 z-0 opacity-30 pointer-events-none mix-blend-overlay">
-            <Image
-              src="/images/hero-bg-with-grain.png"
-              alt="Red grain texture"
-              fill
-              className="object-cover opacity-60 grayscale"
-            />
-          </div>
+          {/* Subtle gradient overlay for glass effect */}
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-gradient-to-br from-red-950/20 via-transparent to-red-900/10 mix-blend-overlay" />
 
           {/* Ambient red glow behind the glass */}
           <div
