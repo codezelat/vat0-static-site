@@ -151,7 +151,8 @@ vat0-static-site/
 │
 ├── public/
 │   └── images/                       # Static assets
-│       ├── hero-bg-with-grain.png    # Hero background texture
+│       ├── hero-bg.png               # Desktop hero background (CSS grain overlay)
+│       ├── hero-bg-mobile.jpg        # Mobile hero background (portrait optimized)
 │       ├── hero-bg.png               # Alternative hero background
 │       └── og-image.jpg              # Open Graph social image (1200×630)
 │
@@ -200,7 +201,7 @@ A **glassmorphic pill** that hovers at the top of the page. Built with:
 
 The Hero is designed to immediately establish authority:
 
-- **Background Image:** `hero-bg-with-grain.png` — a textured abstract composition rendered with a slow 25-second breathing scale animation (`1x` → `1.05x` → `1x` on infinite loop)
+- **Background Image:** `hero-bg.png` (desktop) or `hero-bg-mobile.jpg` (mobile) — a textured abstract composition with CSS-generated grain overlay. The image renders with a slow 25-second breathing scale animation (`1x` → `1.05x` → `1x` on infinite loop)
 - **Overlay Stack:** A `bg-black/50 mix-blend-multiply` layer + a vertical `bg-linear-to-b` gradient ensures text legibility while preserving the texture
 - **Interactive Glow:** A terminal-green radial glow (`bg-terminal-green/15`, 150px radius, 100px blur) follows the mouse cursor with spring physics (`stiffness: 40, damping: 20, mass: 0.5`)
 - **Typography:** The headline `"Secure by Default. Verifiable at Release."` staggers in word-by-word with 80ms delays and a custom easing curve `[0.215, 0.61, 0.355, 1]`
@@ -241,7 +242,7 @@ Three service cards that **stack on top of each other** as the user scrolls:
 - Cards use `backdrop-blur-xl` + semi-transparent backgrounds for depth
 - Feature pills are rendered in monospace inside bordered capsules
 - A green status dot with a `box-shadow` glow sits in the top-right of each card
-- The section also has a `hero-bg-with-grain.png` background at 40% `mix-blend-screen`
+- The section uses a CSS gradient background for performance optimization
 
 <br />
 

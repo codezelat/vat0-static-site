@@ -44,40 +44,65 @@ export default function Hero() {
   return (
     <section className="w-full h-svh p-6 md:p-10 lg:p-12 pb-0 md:pb-0 lg:pb-0">
       <div className="relative w-full h-full max-w-7xl mx-auto rounded-2xl md:rounded-[2.5rem] overflow-hidden flex flex-col items-center justify-center bg-[#050505] border border-white/5">
-        {/* Background Image Container - LCP Image */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <motion.div
-            className="absolute inset-0 will-change-transform"
-            animate={{
-              scale: [1, 1.05, 1],
+        {/* Background Images Container */}
+        <div className="absolute inset-0 overflow-hidden">
+          
+          {/* Desktop Image */}
+          <div className="absolute inset-0 hidden md:block">
+            <motion.div
+              className="absolute inset-0 will-change-transform"
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            >
+              <Image
+                src="/images/hero-bg.png"
+                alt="Hero background"
+                fill
+                priority
+                quality={80}
+                sizes="100vw"
+                className="object-cover object-center"
+              />
+            </motion.div>
+            {/* Desktop Overlays */}
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90" />
+          </div>
+
+          {/* Mobile Image */}
+          <div className="absolute inset-0 block md:hidden">
+            <motion.div
+              className="absolute inset-0 will-change-transform"
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            >
+              <Image
+                src="/images/hero-bg-mobile.jpg"
+                alt="Hero background"
+                fill
+                priority
+                quality={80}
+                sizes="100vw"
+                className="object-cover object-center"
+              />
+            </motion.div>
+            {/* Mobile Overlays */}
+            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
+          </div>
+
+          {/* CSS Grain Overlay */}
+          <div 
+            className="absolute inset-0 opacity-[0.12] mix-blend-overlay pointer-events-none"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
             }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
-            <Image
-              src="/images/hero-bg-with-grain.png"
-              alt="Hero abstract background"
-              fill
-              priority
-              fetchPriority="high"
-              quality={75}
-              sizes="100vw"
-              className="object-cover object-center"
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkLzZBPLDx8fHV9ZILOn5qe4yOjp8gXj48Xj48UXuOk5SVmKOWk///2wBDAR..."
-            />
-          </motion.div>
-          {/* Overlays to secure text legibility and mood while keeping image visible */}
-          <div className="absolute inset-0 bg-black/50 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/90" />
+          />
         </div>
 
-        {/* Interactive Background Glow */}
+        {/* Interactive Background Glow - Desktop only */}
         <motion.div
-          className="absolute w-100 h-100 md:w-150 md:h-150 rounded-full bg-terminal-green/15 mix-blend-screen -z-10 will-change-transform"
+          className="hidden md:block absolute w-[600px] h-[600px] rounded-full bg-terminal-green/10 -z-10"
           style={{ filter: "blur(100px)" }}
           animate={{
             x: mousePosition.x * 200,
@@ -86,13 +111,8 @@ export default function Hero() {
           transition={{ type: "spring", stiffness: 40, damping: 20, mass: 0.5 }}
         />
 
-        {/* Static ambient center glow */}
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 rounded-full bg-neutral-900/40 mix-blend-lighten pointer-events-none -z-20"
-          style={{ filter: "blur(120px)" }}
-        />
-
-        <div className="z-10 flex flex-col items-center text-center px-4 md:px-6 max-w-2xl">
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center text-center px-4 md:px-6 max-w-2xl">
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif tracking-normal leading-[1.2] text-white flex flex-wrap justify-center gap-[0.2em]"
             variants={containerVars}
@@ -107,7 +127,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-neutral-500 mt-5 text-xs md:text-sm max-w-md font-sans leading-relaxed"
+            className="text-neutral-400 mt-5 text-xs md:text-sm max-w-md font-sans leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -116,19 +136,20 @@ export default function Hero() {
             to compromise, observable in operation, and fiercely protected from
             the root up.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
-            className="absolute bottom-8 flex flex-col items-center gap-3"
-          >
-            <div className="w-px h-8 bg-white/20" />
-            <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-500 font-sans">
-              Scroll
-            </span>
-          </motion.div>
         </div>
+
+        {/* Scroll Indicator - Positioned at bottom of card */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3"
+        >
+          <div className="w-px h-8 bg-white/20" />
+          <span className="text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-500 font-sans">
+            Scroll
+          </span>
+        </motion.div>
       </div>
     </section>
   );

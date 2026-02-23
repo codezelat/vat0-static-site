@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ContactModal from "@/components/ui/ContactModal";
 
+// CSS for red tinted background with heavy grain
+const redGrainStyle = {
+  backgroundImage: `url("/images/hero-bg.png")`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+};
+
 export default function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,8 +31,16 @@ export default function Contact() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative w-full max-w-7xl rounded-2xl md:rounded-[2.5rem] overflow-hidden p-10 md:p-24 lg:p-32 flex flex-col items-center text-center border border-red-900/40 backdrop-blur-3xl bg-white/2 shadow-[0_0_100px_rgba(153,27,27,0.15)]"
         >
-          {/* Subtle gradient overlay for glass effect */}
-          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-gradient-to-br from-red-950/20 via-transparent to-red-900/10 mix-blend-overlay" />
+          {/* Grain texture overlay for cinematic glass effect */}
+          <div 
+            className="absolute inset-0 z-0 opacity-[0.08] pointer-events-none mix-blend-overlay"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            }}
+          />
+          
+          {/* Subtle gradient overlay for depth */}
+          <div className="absolute inset-0 z-0 opacity-30 pointer-events-none bg-gradient-to-br from-red-950/30 via-transparent to-red-900/20" />
 
           {/* Ambient red glow behind the glass */}
           <div
