@@ -67,23 +67,27 @@ export default function PrivacyPolicy() {
             <li><strong className="text-white">Email Address:</strong> For correspondence regarding your inquiry</li>
             <li><strong className="text-white">Phone Number:</strong> Optional, for direct communication if preferred</li>
             <li><strong className="text-white">Company/Organization:</strong> To understand your business context</li>
+            <li><strong className="text-white">Service Interest:</strong> The service category you select in our contact form</li>
+            <li><strong className="text-white">Budget Range:</strong> Optional budget preference for project scoping</li>
             <li><strong className="text-white">Message Content:</strong> Details about your cybersecurity needs</li>
+            <li><strong className="text-white">Security Verification Token:</strong> A Cloudflare Turnstile token used to prevent spam</li>
           </ul>
 
           <h3 className="text-lg font-serif text-white mb-3">Analytics Data</h3>
           <p className="mb-4">
-            We use <strong>Vercel Analytics</strong> to understand how visitors interact with our website. 
-            This includes:
+            We use <strong>Google Analytics 4 (GA4)</strong> to understand how visitors interact with our website.
+            This may include:
           </p>
           <ul className="list-disc list-inside mb-4 text-neutral-400 space-y-1 ml-4">
             <li>Pages visited and time spent on each page</li>
             <li>Referral sources (how you found our website)</li>
             <li>Device type and browser information (anonymized)</li>
             <li>Geographic location (country/city level only)</li>
+            <li>Interaction events such as page views and scroll depth</li>
           </ul>
           <p className="mb-4 text-neutral-400">
-            Vercel Analytics does not use cookies and does not collect personally identifiable information. 
-            All data is anonymized and aggregated.
+            GA4 is disabled by default and only activated after you grant analytics consent via our cookie banner.
+            If you select &quot;Essential Only,&quot; analytics tracking remains disabled.
           </p>
 
           <h3 className="text-lg font-serif text-white mb-3">Technical Data</h3>
@@ -143,12 +147,13 @@ export default function PrivacyPolicy() {
       icon: <Server className="w-5 h-5" />,
       content: (
         <>
-          <h3 className="text-lg font-serif text-white mb-3">Data Processor</h3>
+          <h3 className="text-lg font-serif text-white mb-3">Form Submission Processing</h3>
           <p className="mb-4 text-neutral-400">
-            Contact form submissions are processed through <strong className="text-white">Formspree.io</strong>, 
-            a third-party form processing service. Formspree acts as a data processor on our behalf and 
-            is contractually bound to protect your data in accordance with this Privacy Policy and 
-            applicable data protection laws.
+            Contact form submissions are processed through our secure API endpoint at{" "}
+            <strong className="text-white">/api/contact</strong>. Submission details are then sent to{" "}
+            <strong className="text-white">Brevo</strong> to deliver notification emails to our team.
+            We also use <strong className="text-white">Cloudflare Turnstile</strong> for spam prevention
+            before a submission is accepted.
           </p>
 
           <h3 className="text-lg font-serif text-white mb-3">Security Measures</h3>
@@ -176,10 +181,11 @@ export default function PrivacyPolicy() {
 
           <h3 className="text-lg font-serif text-white mb-3">Data Retention</h3>
           <p className="text-neutral-400">
-            We retain contact form submissions for <strong className="text-white">2 years</strong> from 
-            the date of submission, or for the duration of our business relationship plus 7 years for 
-            legal and accounting purposes, whichever is longer. Analytics data is retained for 
-            26 months, after which it is automatically deleted or anonymized.
+            We retain contact form submissions for <strong className="text-white">2 years</strong> from
+            the date of submission in our operational communication systems. Where submissions lead to an
+            active client relationship, related records may be retained for up to 7 years to satisfy legal,
+            tax, and accounting obligations. Analytics data is retained for up to 26 months, after which it
+            is deleted or anonymized according to provider settings.
           </p>
         </>
       ),
@@ -208,18 +214,12 @@ export default function PrivacyPolicy() {
             persistent data on your device.
           </p>
 
-          <h3 className="text-lg font-serif text-white mb-3">Vercel Analytics</h3>
-          <p className="mb-4 text-neutral-400">
-            Vercel Analytics is a privacy-focused analytics solution that does not use cookies 
-            and does not collect personally identifiable information. It uses real-user metrics 
-            (Web Vitals) to help us understand website performance without compromising your privacy.
-          </p>
-
           <h3 className="text-lg font-serif text-white mb-3">Google Analytics 4</h3>
           <p className="text-neutral-400">
             We use Google Analytics 4 (GA4) to understand how visitors interact with our website. 
             GA4 uses cookies and similar technologies to collect information about your device, 
             browser, and website usage patterns. This data helps us improve our website and services.
+            We have configured GA4 to disable ad personalization signals by default.
             <br /><br />
             <strong className="text-white">Your Choice:</strong> You can control Google Analytics 
             tracking through our cookie consent banner. If you select &quot;Essential Only&quot;, 

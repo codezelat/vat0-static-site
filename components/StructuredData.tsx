@@ -99,10 +99,10 @@ export function StructuredData() {
     },
     "sameAs": [
       
-      "https://linkedin.com/company/vat0",
-      "https://facebook.com/vat0",
-      "https://instagram.com/vat0",
-      "https://x.com/vat0"
+      "https://www.linkedin.com/company/vat0",
+      "https://www.facebook.com/vat0.lk",
+      "https://www.instagram.com/vat0.lk",
+      "https://www.x.com/vat0lk"
     ],
     "priceRange": "$$$",
     "openingHoursSpecification": [

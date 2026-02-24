@@ -29,7 +29,7 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vat0.lk"),
-  title: "VAulTzer0 | Enterprise Zero Trust Security Solutions Sri Lanka",
+  title: "Vault Zero | VAT0 | Enterprise Zero Trust Security Solutions Sri Lanka",
   description:
     "VAulTzer0 (VAT0) is Sri Lanka's premier enterprise cybersecurity consultancy specializing in zero trust architecture, DevSecOps, cloud security, penetration testing, and vulnerability management. We deliver world-class security solutions for enterprises in Colombo and across the globe.",
   keywords: [
@@ -90,8 +90,8 @@ export const metadata: Metadata = {
     description:
       "Sri Lanka's premier enterprise cybersecurity consultancy specializing in zero trust architecture, DevSecOps, cloud security, and penetration testing.",
     images: ["/images/og-image.jpg"],
-    creator: "@vaultzer0",
-    site: "@vaultzer0",
+    creator: "@vat0lk",
+    site: "@vat0lk",
   },
   category: "Cybersecurity",
 };

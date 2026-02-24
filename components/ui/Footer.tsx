@@ -71,6 +71,17 @@ export default function Footer() {
             Resilient systems. Verified access. Enterprise zero-trust
             architecture engineered for absolute scale and security.
           </p>
+          <div className="space-y-1 text-sm text-neutral-500 font-sans leading-relaxed">
+            <address className="not-italic">
+              345/35, RIT Alles Mw, Colombo 08
+            </address>
+            <a
+              href="tel:+94114858899"
+              className="text-neutral-400 hover:text-white transition-colors duration-300"
+            >
+              Tel: +94114858899
+            </a>
+          </div>
         </div>
 
         {/* Right Links Grid - Now 3 columns instead of 4 */}
@@ -98,16 +109,16 @@ export default function Footer() {
             <h4 className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest mb-3">
               Connect
             </h4>
-            <FooterLink href="https://linkedin.com/company/vat0" external>
+            <FooterLink href="https://www.linkedin.com/company/vat0" external>
               LinkedIn
             </FooterLink>
-            <FooterLink href="https://facebook.com/vat0" external>
+            <FooterLink href="https://www.facebook.com/vat0.lk" external>
               Facebook
             </FooterLink>
-            <FooterLink href="https://instagram.com/vat0" external>
+            <FooterLink href="https://www.instagram.com/vat0.lk" external>
               Instagram
             </FooterLink>
-            <FooterLink href="https://x.com/vat0" external>
+            <FooterLink href="https://www.x.com/vat0lk" external>
               X
             </FooterLink>
           </div>
