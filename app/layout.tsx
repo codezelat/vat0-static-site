@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     "security assessment",
     "compliance consulting",
   ],
-  authors: [{ name: "VAulTzer0", url: "https://vat0.lk" }],
-  creator: "VAulTzer0 (VAT0)",
-  publisher: "VAulTzer0 (VAT0)",
+  authors: [{ name: "VaultZero", url: "https://vat0.lk" }],
+  creator: "VaultZero (VAT0)",
+  publisher: "VaultZero (VAT0)",
   alternates: {
     canonical: "/",
   },

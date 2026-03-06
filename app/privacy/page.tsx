@@ -4,12 +4,12 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | VAulTzer0 (VAT0)",
-  description: "Privacy Policy for VAulTzer0 (VAT0) - A cybersecurity consultancy by Codezela Technologies. Learn how we collect, use, and protect your personal data in compliance with Sri Lanka PDPA and GDPR.",
-  keywords: ["privacy policy", "VAT0", "VAulTzer0", "cybersecurity", "data protection", "GDPR", "Sri Lanka PDPA", "Codezela Technologies"],
+  title: "Privacy Policy | VaultZero (VAT0)",
+  description: "Privacy Policy for VaultZero (VAT0) - A cybersecurity consultancy by Codezela Technologies. Learn how we collect, use, and protect your personal data in compliance with Sri Lanka PDPA and GDPR.",
+  keywords: ["privacy policy", "VAT0", "VaultZero", "cybersecurity", "data protection", "GDPR", "Sri Lanka PDPA", "Codezela Technologies"],
   openGraph: {
-    title: "Privacy Policy | VAulTzer0 (VAT0)",
-    description: "Privacy Policy for VAulTzer0 (VAT0) - A cybersecurity consultancy by Codezela Technologies.",
+    title: "Privacy Policy | VaultZero (VAT0)",
+    description: "Privacy Policy for VaultZero (VAT0) - A cybersecurity consultancy by Codezela Technologies.",
     type: "article",
   },
 };
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
       content: (
         <>
           <p className="mb-4">
-            <strong>VAulTzer0 Security</strong> (&quot;VAT0&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is 
+            <strong>VaultZero Security</strong> (&quot;VAT0&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is 
             a cybersecurity consultancy operated by <strong>Codezela Technologies (Pvt) Ltd</strong>, 
             a company registered in <strong>Sri Lanka</strong> under company registration number 
             PV00218349. We are committed to protecting your privacy and ensuring the security of your 
@@ -488,7 +488,7 @@ export default function PrivacyPolicy() {
 
             {/* Intro Paragraph */}
             <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-              At VAulTzer0, we believe that privacy is a fundamental right and the foundation of 
+              At VaultZero, we believe that privacy is a fundamental right and the foundation of 
               trust. This policy outlines how we collect, protect, and handle your personal information 
               with the same rigor we apply to enterprise security.
             </p>
@@ -587,7 +587,7 @@ export default function PrivacyPolicy() {
                     <div>
                       <h4 className="text-white font-medium mb-1">Company</h4>
                       <address className="text-neutral-400 not-italic">
-                        VAulTzer0 Security<br />
+                        VaultZero Security<br />
                         A division of Codezela Technologies (Pvt) Ltd<br />
                         345/35, RIT Alles Mw<br />
                         Colombo 08, 00800<br />

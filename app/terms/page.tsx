@@ -20,12 +20,12 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | VAulTzer0 (VAT0)",
-  description: "Terms of Service for VAulTzer0 (VAT0) - A cybersecurity consultancy by Codezela Technologies. Legal terms governing our consulting services and client relationships.",
-  keywords: ["terms of service", "terms and conditions", "VAT0", "VAulTzer0", "cybersecurity consulting", "legal", "Sri Lanka"],
+  title: "Terms of Service | VaultZero (VAT0)",
+  description: "Terms of Service for VaultZero (VAT0) - A cybersecurity consultancy by Codezela Technologies. Legal terms governing our consulting services and client relationships.",
+  keywords: ["terms of service", "terms and conditions", "VAT0", "VaultZero", "cybersecurity consulting", "legal", "Sri Lanka"],
   openGraph: {
-    title: "Terms of Service | VAulTzer0 (VAT0)",
-    description: "Terms of Service for VAulTzer0 (VAT0) - Legal terms governing our consulting services.",
+    title: "Terms of Service | VaultZero (VAT0)",
+    description: "Terms of Service for VaultZero (VAT0) - Legal terms governing our consulting services.",
     type: "article",
   },
 };
@@ -50,7 +50,7 @@ export default function TermsOfService() {
         <>
           <p className="mb-4">
             By accessing our website, engaging our services, or entering into a consulting agreement 
-            with <strong>VAulTzer0 Security</strong> (&quot;VAT0&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), 
+            with <strong>VaultZero Security</strong> (&quot;VAT0&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), 
             a division of <strong>Codezela Technologies (Pvt) Ltd</strong>, you (&quot;Client&quot;, &quot;you&quot;, or &quot;your&quot;) 
             acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
           </p>
@@ -75,7 +75,7 @@ export default function TermsOfService() {
       content: (
         <>
           <p className="mb-4">
-            VAulTzer0 provides professional cybersecurity consulting and related technology services, including 
+            VaultZero provides professional cybersecurity consulting and related technology services, including 
             but not limited to:
           </p>
           
@@ -508,7 +508,7 @@ export default function TermsOfService() {
 
             {/* Intro Paragraph */}
             <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-              These Terms of Service govern your use of VAulTzer0&apos;s consulting services and 
+              These Terms of Service govern your use of VaultZero&apos;s consulting services and 
               establish the legal framework for our professional relationship. Please read them carefully.
             </p>
           </div>
@@ -593,7 +593,7 @@ export default function TermsOfService() {
                     <div>
                       <h4 className="text-white font-medium mb-1">Company</h4>
                       <p className="text-neutral-400">
-                        VAulTzer0 Security<br />
+                        VaultZero Security<br />
                         A division of Codezela Technologies (Pvt) Ltd
                       </p>
                     </div>

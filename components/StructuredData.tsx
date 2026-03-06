@@ -10,7 +10,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": "https://vat0.lk/#organization",
-    "name": "VAulTzer0 (VAT0)",
+    "name": "VaultZero (VAT0)",
     "alternateName": "VAT0 Security",
     "description": "Sri Lanka's premier enterprise cybersecurity consultancy specializing in zero trust architecture, DevSecOps, cloud security, penetration testing, and vulnerability management.",
     "url": "https://vat0.lk",
